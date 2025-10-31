@@ -183,7 +183,7 @@ No notebook há células que geram os seguintes gráficos:
 
 ---
 
-## Conclusões **
+## Conclusões
 
 1. A maior perda de usuários ocorre entre a tela principal (MainScreenAppear) e a tela de ofertas (OffersScreenAppear). Aproximadamente 38% dos usuários não avançam além da tela inicial, o que sugere que pode haver barreiras ou falta de incentivo para explorar os produtos.
 2. Quase metade dos usuários (48%) que abrem o app completam toda a jornada até a compra, o que é uma taxa de conversão excelente!
