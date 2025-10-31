@@ -79,6 +79,7 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 ### Métricas a reportar
 
 * Usuários que fizeram cada evento (n e % do total de usuários):
+
 | Evento                  | Usuários Únicos (N) | % em relação ao total |
 | :---------------------- | :-----------------: | :-------------------: |
 | MainScreenAppear        |        7 419        |        98.47 %        |
@@ -88,6 +89,7 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 | Tutorial                |         840         |        11.15 %        |
 
 * Conversão entre etapas (porcentagem que vai de A→B, B→C, ...):
+
 | Etapa          | Conversão |
 | :------------- | :-------: |
 | Main → Offers  |  61.91 %  |
@@ -96,6 +98,7 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 
 * Etapa com maior perda de usuários (gargalo do funil): Entre Main → Offers a taxa de perda é de 38%
 * Proporção de usuários que completam o funil até `purchase`:
+
 | Métrica                                  |  Valor  |
 | :--------------------------------------- | :-----: |
 | Usuários que completaram todas as etapas |  3 429  |
@@ -135,6 +138,7 @@ Isso confirma que a divisão dos grupos foi feita corretamente e que o experimen
   * Se 248 difere de um controle mas não do outro, reavalie a aleatoriedade / tamanho das amostras.
 
 Resultado do teste:
+
 | Evento                  |  Grupo A | Grupo B | Grupo A (%) | Grupo B (%) | p-valor | Diferença Significativa |
 | :---------------------- | :------: | :-----: | :---------: | :---------: | :-----: | :---------------------: |
 | CartScreenAppear        |    246   |   248   |    50.97    |    48.48    |  0.0784 |            ❌            |
@@ -202,22 +206,22 @@ No notebook há células que geram os seguintes gráficos:
 ---
 
 analise_funil_vendas/
-├── .venv/                      # Ambiente virtual
+├── .venv/ # Ambiente virtual
 │
 ├── analise/
-│   └── analise_funil_aab.ipynb  # Notebook principal de análise
+│ └── analise_funil_aab.ipynb # Notebook principal de análise
 │
 ├── data/
-│   ├── processed/
-│   │   └── logs_exp_us_processado.csv   # Arquivo criado após o ETL
-│   └── raw/
-│       └── logs_exp_us.csv              # Dataset bruto utilizado no extract
+│ ├── processed/
+│ │ └── logs_exp_us_processado.csv # Arquivo criado após o ETL
+│ └── raw/
+│ └── logs_exp_us.csv # Dataset bruto utilizado no extract
 │
 ├── src/
-│   ├── extract.py    # Extração dos dados
-│   ├── transform.py  # Limpeza e transformação
-│   ├── load.py       # Carregamento e salvamento
-│   └── main.py       # Pipeline principal (executa o ETL completo)
+│ ├── extract.py # Extração dos dados
+│ ├── transform.py # Limpeza e transformação
+│ ├── load.py # Carregamento e salvamento
+│ └── main.py # Pipeline principal (executa o ETL completo)
 │
 ├── requirements.txt
 └── README.md
