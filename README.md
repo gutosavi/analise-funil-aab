@@ -79,19 +79,28 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 ### Métricas a reportar
 
 * Usuários que fizeram cada evento (n e % do total de usuários):
-| Evento | Usuários Únicos (N) | Percentual em Relação ao Início |
-| :--- | :---: | :---: |
-| **MainScreenAppear** | 7419 | 98.47% |
-| OffersScreenAppear | 4593 | 60.96% |
-| CartScreenAppear | 3734 | 49.56% |
-| PaymentScreenSuccessful | 3539 | 46.97% |
-| Tutorial | 840 | 11.15% |
+| Evento                  | Usuários Únicos (N) | % em relação ao total |
+| :---------------------- | :-----------------: | :-------------------: |
+| MainScreenAppear        |        7 419        |        98.47 %        |
+| OffersScreenAppear      |        4 593        |        60.96 %        |
+| CartScreenAppear        |        3 734        |        49.56 %        |
+| PaymentScreenSuccessful |        3 539        |        46.97 %        |
+| Tutorial                |         840         |        11.15 %        |
+
 * Conversão entre etapas (porcentagem que vai de A→B, B→C, ...):
-    Main → Offers: 61.91%
-    Offers → Cart: 81.30%
-    Cart → Payment: 94.78%
+| Etapa          | Conversão |
+| :------------- | :-------: |
+| Main → Offers  |  61.91 %  |
+| Offers → Cart  |  81.30 %  |
+| Cart → Payment |  94.78 %  |
+
 * Etapa com maior perda de usuários (gargalo do funil): Entre Main → Offers a taxa de perda é de 38%
-* Proporção de usuários que completam o funil até `purchase`: 3429 usuários / 46.22%
+* Proporção de usuários que completam o funil até `purchase`:
+| Métrica                                  |  Valor  |
+| :--------------------------------------- | :-----: |
+| Usuários que completaram todas as etapas |  3 429  |
+| Conversão final                          | 46.22 % |
+
 
 ---
 
@@ -125,23 +134,25 @@ Isso confirma que a divisão dos grupos foi feita corretamente e que o experimen
   * Se 248 difere de ambos os controles em várias métricas e com p-valores baixos, há indícios de que a nova fonte altera o comportamento.
   * Se 248 difere de um controle mas não do outro, reavalie a aleatoriedade / tamanho das amostras.
 
-Resultado resumido do teste:
-                            Grupo A  Grupo B Grupo A(%) Grupo B(%)  p_valor  Diferença Significativa
-CartScreenAppear                246      248      50.97      48.48   0.0784  False 
-CartScreenAppear           controle      248      50.11      48.48   0.1818  False  
-CartScreenAppear                247      248      49.26      48.48   0.5786  False  
-MainScreenAppear           controle      248      98.58      98.27   0.2942  False  
-MainScreenAppear                246      248      98.63      98.27   0.2950  False  
-MainScreenAppear                247      248      98.53      98.27   0.4587  False  
-OffersScreenAppear              246      248      62.08      60.35   0.2084  False  
-OffersScreenAppear         controle      248      61.28      60.35   0.4343  False  
-OffersScreenAppear              247      248      60.49      60.35   0.9198  False  
-PaymentScreenSuccessful         246      248      48.31      46.55   0.2123  False  
-PaymentScreenSuccessful    controle      248      47.19      46.55   0.6004  False  
-PaymentScreenSuccessful         247      248      46.08      46.55   0.7373  False  
-Tutorial                   controle      248      11.23      11.00   0.7649  False  
-Tutorial                        247      248      11.26      11.00   0.7653  False  
-Tutorial                        246      248      11.19      11.00   0.8264  False  
+Resultado do teste:
+| Evento                  |  Grupo A | Grupo B | Grupo A (%) | Grupo B (%) | p-valor | Diferença Significativa |
+| :---------------------- | :------: | :-----: | :---------: | :---------: | :-----: | :---------------------: |
+| CartScreenAppear        |    246   |   248   |    50.97    |    48.48    |  0.0784 |            ❌            |
+| CartScreenAppear        | controle |   248   |    50.11    |    48.48    |  0.1818 |            ❌            |
+| CartScreenAppear        |    247   |   248   |    49.26    |    48.48    |  0.5786 |            ❌            |
+| MainScreenAppear        | controle |   248   |    98.58    |    98.27    |  0.2942 |            ❌            |
+| MainScreenAppear        |    246   |   248   |    98.63    |    98.27    |  0.2950 |            ❌            |
+| MainScreenAppear        |    247   |   248   |    98.53    |    98.27    |  0.4587 |            ❌            |
+| OffersScreenAppear      |    246   |   248   |    62.08    |    60.35    |  0.2084 |            ❌            |
+| OffersScreenAppear      | controle |   248   |    61.28    |    60.35    |  0.4343 |            ❌            |
+| OffersScreenAppear      |    247   |   248   |    60.49    |    60.35    |  0.9198 |            ❌            |
+| PaymentScreenSuccessful |    246   |   248   |    48.31    |    46.55    |  0.2123 |            ❌            |
+| PaymentScreenSuccessful | controle |   248   |    47.19    |    46.55    |  0.6004 |            ❌            |
+| PaymentScreenSuccessful |    247   |   248   |    46.08    |    46.55    |  0.7373 |            ❌            |
+| Tutorial                | controle |   248   |    11.23    |    11.00    |  0.7649 |            ❌            |
+| Tutorial                |    247   |   248   |    11.26    |    11.00    |  0.7653 |            ❌            |
+| Tutorial                |    246   |   248   |    11.19    |    11.00    |  0.8264 |            ❌            |
+ 
 
 **Resultados resumidos:**
 
@@ -191,19 +202,23 @@ No notebook há células que geram os seguintes gráficos:
 ---
 
 analise_funil_vendas/
-├── .venv/ # Ambiente virtual
+├── .venv/                      # Ambiente virtual
+│
 ├── analise/
-│ └── analise_funil_aab.ipynb # Notebook principal de análise
+│   └── analise_funil_aab.ipynb  # Notebook principal de análise
+│
 ├── data/
-│ ├── processed/
-│ │ └── logs_exp_us_processado.csv # Arquivo criado após o ETL
-│ └── raw/
-│ └── logs_exp_us.csv # Dataset bruto utilizado no extract
+│   ├── processed/
+│   │   └── logs_exp_us_processado.csv   # Arquivo criado após o ETL
+│   └── raw/
+│       └── logs_exp_us.csv              # Dataset bruto utilizado no extract
+│
 ├── src/
-│ ├── extract.py # Script responsável pela extração dos dados
-│ ├── transform.py # Limpeza e transformação dos dados
-│ ├── load.py # Carregamento e salvamento dos dados processados
-│ └── main.py # Pipeline principal (executa o ETL completo)
+│   ├── extract.py    # Extração dos dados
+│   ├── transform.py  # Limpeza e transformação
+│   ├── load.py       # Carregamento e salvamento
+│   └── main.py       # Pipeline principal (executa o ETL completo)
+│
 ├── requirements.txt
 └── README.md
 
