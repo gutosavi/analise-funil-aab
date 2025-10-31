@@ -1,0 +1,17 @@
+# Ambientes virtuais
+.venv/
+venv/
+
+# Arquivos temporários / cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+
+# Dados brutos (caso queira manter apenas os processados)
+data/raw/
+
+# Configurações locais
+.env
+.DS_Store
