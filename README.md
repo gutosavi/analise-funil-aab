@@ -56,10 +56,10 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 
 ## Análise exploratória (resumo)
 
-**Número total de eventos:** *241298*
-**Número total de usuários únicos:** *7534*
-**Período dos dados (min → max):** *de 2019-08-01 00:07:28 até 2019-08-07 21:15:17*
-**Média de eventos por usuário:** *34471*
+- **Número total de eventos:** *241298*
+- **Número total de usuários únicos:** *7534*
+- **Período dos dados (min → max):** *de 2019-08-01 00:07:28 até 2019-08-07 21:15:17*
+- **Média de eventos por usuário:** *34471*
 
 > *Observação*: foram excluídos da análise registros anteriores à data de 01-08-2019, pois é a partir deste momento que os dados começam a ficar significantes. No total, foram excluídos 2828 eventos (1,16%) e 17 usuários(0.26%).
 
