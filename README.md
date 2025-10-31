@@ -79,12 +79,13 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 ### Métricas a reportar
 
 * Usuários que fizeram cada evento (n e % do total de usuários):
-                            *Usuário*   *Percentual*            
-    MainScreenAppear	    7419	    98.47
-    OffersScreenAppear	    4593	    60.96
-    CartScreenAppear	    3734	    49.56
-    PaymentScreenSuccessful	3539	    46.97
-    Tutorial	            840	        11.15 
+| Evento | Usuários Únicos (N) | Percentual em Relação ao Início |
+| :--- | :---: | :---: |
+| **MainScreenAppear** | 7419 | 98.47% |
+| OffersScreenAppear | 4593 | 60.96% |
+| CartScreenAppear | 3734 | 49.56% |
+| PaymentScreenSuccessful | 3539 | 46.97% |
+| Tutorial | 840 | 11.15% |
 * Conversão entre etapas (porcentagem que vai de A→B, B→C, ...):
     Main → Offers: 61.91%
     Offers → Cart: 81.30%
