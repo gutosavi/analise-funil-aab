@@ -203,34 +203,34 @@ No notebook há células que geram os seguintes gráficos:
 
 ## Estrutura de arquivos
 
----
-
+```
 analise_funil_vendas/
-├── .venv/ # Ambiente virtual
+├── .venv/                          # Ambiente virtual
 │
 ├── analise/
-│ └── analise_funil_aab.ipynb # Notebook principal de análise
+│   └── analise_funil_aab.ipynb     # Notebook principal de análise
 │
 ├── data/
-│ ├── processed/
-│ │ └── logs_exp_us_processado.csv # Arquivo criado após o ETL
-│ └── raw/
-│ └── logs_exp_us.csv # Dataset bruto utilizado no extract
+│   ├── processed/
+│   │   └── logs_exp_us_processado.csv   # Arquivo criado após o ETL
+│   └── raw/
+│       └── logs_exp_us.csv              # Dataset bruto utilizado no extract
 │
 ├── src/
-│ ├── extract.py # Extração dos dados
-│ ├── transform.py # Limpeza e transformação
-│ ├── load.py # Carregamento e salvamento
-│ └── main.py # Pipeline principal (executa o ETL completo)
+│   ├── extract.py      # Extração dos dados
+│   ├── transform.py    # Limpeza e transformação
+│   ├── load.py         # Carregamento e salvamento
+│   └── main.py         # Pipeline principal (executa o ETL completo)
 │
 ├── requirements.txt
 └── README.md
 
+```
 ---
 
 ## Contato
 
 Gustavo Savi — Analista de Dados (projeto TripleTen).
-LinkedIn — [www.linkedin.com/in/gustavo-savi](http://www.linkedin.com/in/gustavo-savi)
+[LinkedIn](http://www.linkedin.com/in/gustavo-savi)
 
 ---
