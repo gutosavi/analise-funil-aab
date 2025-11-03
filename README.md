@@ -54,7 +54,7 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 
 ---
 
-## Análise exploratória (resumo)
+## Análise exploratória
 
 - **Número total de eventos:** *241298*
 - **Número total de usuários únicos:** *7534*
@@ -67,7 +67,7 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 
 ## Funil de eventos
 
-### Etapas consideradas (exemplo)
+### Etapas consideradas
 
 1. MainScreenAppear - O app é iniciado e o usuário vê a tela principal. Ponto de entrada lógico.
 2. OffersScreenAppear - O usuário navega pelas promoções ou produtos disponíveis.
@@ -88,7 +88,7 @@ No entanto, o pipeline pode ser facilmente configurado para enviar os dados para
 | PaymentScreenSuccessful |        3 539        |        46.97 %        |
 | Tutorial                |         840         |        11.15 %        |
 
-* Conversão entre etapas (porcentagem que vai de A→B, B→C, ...):
+* Conversão entre etapas
 
 | Etapa          | Conversão |
 | :------------- | :-------: |
